@@ -20,12 +20,15 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
     private Delivery delivery;
 
     private LocalDateTime orderDate;//주문시간
 
     private OrderStatus status; //주문상태
+
 
 }
