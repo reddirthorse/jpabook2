@@ -23,5 +23,6 @@ public abstract class Item {
     private int price;
     private int stockQuantity;
 
+    @ManyToMany
     private List<Category> categories = new ArrayList<>();
 }
