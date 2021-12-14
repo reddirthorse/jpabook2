@@ -76,10 +76,10 @@ public class Order {
     }
     //==조회 로직==
     //전체 주문 가격 조회
-    private int getTotalPrice(){
+    public int getTotalPrice(){
         int totalPrice = 0;
         for(OrderItem orderItem: orderItems){
-            totalPrice += orderItem.getOrderPrice();
+            totalPrice += orderItem.getTotalPrice();
         }
         return totalPrice;
     }
